@@ -8,6 +8,7 @@ require "aliyun/services/slb"
 require "aliyun/services/sts"
 require "aliyun/services/vpc"
 require "aliyun/services/cloud_auth"
+require "aliyun/services/domain"
 
 module Aliyun
   SERVICES = {
@@ -20,6 +21,7 @@ module Aliyun
     :slb => SLBConfig,
     :sts => STSConfig,
     :vpc => VPCConfig,
-    :cloud_auth => CloudAuthConfig
+    :cloud_auth => CloudAuthConfig,
+    :domain => DomainConfig
   }
 end
