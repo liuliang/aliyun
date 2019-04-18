@@ -1,4 +1,5 @@
 require 'net/http'
+require 'net/https'
 require 'time'
 require 'securerandom'
 require 'uri'
@@ -45,7 +46,7 @@ module Aliyun
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = (uri.scheme == "https")
 
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      http.verify_mode = ::OpenSSL::SSL::VERIFY_NONE
       if $DEBUG
         puts "Request URI: #{uri.request_uri}"
       end

@@ -1,15 +1,15 @@
 module Aliyun
-  class CDNConfig < APIConfig
+  class BusinessConfig < APIConfig
     def self.info
-      "Aliyu CDN Service"
+      "Aliyu Business Service"
     end
     def self.endpoint
-      'https://cdn.aliyuncs.com/'
+      'https://business.aliyuncs.com/'
     end
     def self.default_parameters
       {
         :Format=>"JSON",
-        :Version=>"2018-05-10",
+        :Version=>"2017-12-14",
         :SignatureMethod=>"HMAC-SHA1",
         :SignatureVersion=>"1.0"
       }
